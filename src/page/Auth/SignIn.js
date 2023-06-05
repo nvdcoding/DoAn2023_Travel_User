@@ -24,7 +24,7 @@ export default function SignIn() {
         setToken(res.returnValue.accessToken);
         setRefreshToken(res.returnValue.refreshToken);
         setItem("user", JSON.stringify(res?.returnValue));
-        history.push("/");
+        window.location.replace("/");
         form.resetFields();
       } else {
         message.error("Không khớp");
@@ -48,7 +48,7 @@ export default function SignIn() {
         setToken(res.returnValue.accessToken);
         setRefreshToken(res.returnValue.refreshToken);
         setItem("user", JSON.stringify(res?.returnValue));
-        history.push("/kenh-hdv");
+        window.location.replace("/kenh-hdv");
         form.resetFields();
       } else {
         message.error("Không khớp");
